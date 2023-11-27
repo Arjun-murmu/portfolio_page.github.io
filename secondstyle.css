@@ -1,0 +1,20 @@
+/* /* @media only screen and (min-width: 400px){
+    .image{
+        max-width: 100%;
+        height: auto;
+    }
+    .tab-link{
+        display: none;
+    }
+    .tab-tit{
+        display: grid;
+        margin: 10px 10px;
+.project{
+    margin-left: 0%;
+    padding: 0%;
+
+}
+    /* .project span{
+        font-size: 
+    } 
+}  */
