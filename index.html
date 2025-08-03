@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun_Murmu.com</title>
+    <title>arjun_murmu.com</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondstyle.css">
     <script src="https://kit.fontawesome.com/5c8adfed6f.js" crossorigin="anonymous"></script>
@@ -32,9 +32,9 @@
     <caption><h2>Qualification Details</h2></caption>
     <div class="tabl">
         <div class="tab-tit">
-            <p class="tab-link current-link" onclick="opentab('matriculation')">10th</p>
-            <p class="tab-link current-link" onclick="opentab('intermidiate')">12th</p>
-            <p class="tab-link current-link" onclick="opentab('undergr')">B.Tech</p>
+            <p class="tab-link current-link" onclick="opentab('matriculation', event)">10th</p>
+            <p class="tab-link" onclick="opentab('intermidiate', event)">12th</p>
+            <p class="tab-link" onclick="opentab('undergr', event)">B.Tech</p>
          </div>
          <div class="tab-contents active-tab" id="matriculation">
             <ul>
@@ -45,7 +45,7 @@
                 <li><span>Percentage: </span>73%</li>
             </ul>
          </div>
-         <div class="tab-contents active-tab" id="intermidiate">
+         <div class="tab-contents" id="intermidiate">
             <ul>
                 <li><span>School: </span> Ravenshaw Higher Secondary School, Cuttack</li>
                 <li><span>Passout: </span> 2021</li>
@@ -54,7 +54,7 @@
                 <li><span>Percentage: </span>70.5%</li>
             </ul>
          </div>
-         <div class="tab-contents active-tab" id = "undergr">
+         <div class="tab-contents" id = "undergr">
             <ul>
                 <li><span>university: </span>Veer Surendra Sai university of Technology, Burla</li>
                 <li><span>Passout: </span> 2026</li>
@@ -168,13 +168,13 @@
 
 <!--script-->
 <script>
-    var tablinks = document.getElementsByClassName("tab-link");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
+    const tablinks = document.getElementsByClassName("tab-link");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname, event){
+        for(let tablink of tablinks){
             tablink.classList.remove("current-link");
         }
-        for(tabcontent of tabcontents){
+        for(let tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("current-link");
@@ -183,3 +183,4 @@
 </script>
 </body>
 </html>
+
